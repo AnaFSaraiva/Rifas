@@ -1,0 +1,94 @@
+:root {
+  --azul_padrao: #01143f;
+  --amarelo_padrao: #FFC60B;
+  --cinza_claro: #D7D7D7;
+  --cinza_escuro: #818181;
+
+}
+
+body {
+  background-image: url(../imagens/background.png);
+  background-position: top, center;
+
+  text-align: center;
+
+  font-family: sans-serif;
+  color: aliceblue;
+}
+
+header {
+  /* position: relative; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  background-color: var(--azul_padrao);
+  border-radius: 0 0 5px 5px;
+
+  margin-bottom: 20px;
+  padding: 10px 250px;
+
+  box-shadow: 2px 2px 20px #ffffff42;
+}
+
+header img {
+  width: 100px;
+  /* mix-blend-mode: normal; */
+}
+
+header h1 {
+  /* position: absolute; */
+  font-size: 42px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  padding: 0 250px;
+  margin: auto;
+}
+
+section p {
+  font-size: 25px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.input_numero {
+  font-size: 25px;
+}
+
+.numeros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 25px;
+
+  background-color: var(--amarelo_padrao);
+  padding: 20px 0;
+  border-radius: 100px 100px 0 0;
+}
+
+.numero {
+  width: 80px;
+  padding: 20px 0;
+
+  background-color: var(--azul_padrao);
+  border: solid 2px var(--azul_padrao);
+}
+
+.comprado {
+  color: var(--cinza_claro);
+  background-color: unset;
+  border: unset;
+}
