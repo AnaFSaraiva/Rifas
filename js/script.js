@@ -1,4 +1,3 @@
-// const colocaNumeros = require('./numeros.js')
 import colocaNumeros from "./numeros.js";
 
 const numeroIndisponivel = [96, 38, 23, 15, 119, 140]
@@ -12,6 +11,8 @@ function marcaNumero() {
 
     if (numeroComprado >= 1 && numeroComprado <= 170) {
       document.querySelector('.erro').style.visibility = "hidden"
+      numeroIndisponivel.push(parseInt(numeroComprado))
+      console.log(numeroIndisponivel)
 
       trocaCor(numeroComprado)
     } else {
@@ -23,10 +24,8 @@ function marcaNumero() {
 
 function trocaCor(value) {
   const numeroEscolhido = document.getElementById(`${value}`)
-  numeroEscolhido.classList.add("comprado")
-  console.log(numeroEscolhido);
+  numeroEscolhido.classList.add("comprado");
 }
-
 
 
 function numerosJaVendidos() {
