@@ -1,14 +1,16 @@
 function colocaNumeros() {
+  const numeros = document.querySelector('.numeros')
+  let criacao = ''
 
-  for (i = 0; i <= 170; i++) {
-
-
-    const numeros = document.querySelector('.numeros')
-    numeros.innerHTML = `<div class = "numero ${i}">
-  <span>${i}</span>
-  </div>`
+  for (i = 1; i <= 170; i++) {
+    criacao += `<div id = "${i}" class = "numero">
+    <span> ${i}</span>
+    </div >`
   }
+  console.log(criacao)
+  numeros.innerHTML = criacao
 }
+
 
 
 function marcaNumero() {
@@ -16,12 +18,30 @@ function marcaNumero() {
 
   btnCompra.onclick = () => {
     const numeroComprado = document.querySelector(".input_numero").value
-    console.log('numeroComprado: ', numeroComprado);
+    if (numeroComprado >= 1 && numeroComprado <= 170) {
+      document.querySelector('.erro').style.visibility = "hidden"
+      console.log('tá funcionando');
+
+      trocaCor(numeroComprado)
+    } else {
+      document.querySelector('.erro').style.visibility = "unset"
+    }
+
   };
 }
-marcaNumero()
 
-// window.onload(
-//colocaNumeros
 
-// )
+function trocaCor(value) {
+  const numeroEscolhido = document.getElementById(`${value}`)
+  numeroEscolhido.classList.add("comprado")
+  console.log(numeroEscolhido);
+}
+
+
+window.onload = () => {
+  colocaNumeros()
+  marcaNumero()
+}
+
+
+// export { colocaNumeros; marcaNumero }

@@ -2,7 +2,7 @@
   --azul_padrao: #01143f;
   --amarelo_padrao: #FFC60B;
   --cinza_claro: #D7D7D7;
-  --cinza_escuro: #818181;
+  --cinza_escuro: #a7a7a7;
 
 }
 
@@ -43,11 +43,12 @@ header h1 {
 }
 
 main {
+
+  max-width: 1024px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 
-  padding: 0 250px;
   margin: auto;
 }
 
@@ -63,19 +64,53 @@ form {
 }
 
 .input_numero {
+  padding: 10px;
   font-size: 25px;
+  border-radius: 16px;
+
+  outline: none;
+  border: 3px solid var(--azul_padrao);
+}
+
+.input_numero:hover {
+  border: 3px solid #4D99FF;
+}
+
+.input_numero:focus {
+
+  border: 3px solid var(--amarelo_padrao);
+}
+
+.btnCompra {
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 16px;
+
+}
+
+.erro {
+  visibility: hidden;
+
+  color: #ff0000;
+  font-size: 16px;
+  font-weight: bold;
+
+  transform: translateX(-8%);
 }
 
 .numeros {
+  /* max-width: 1100px; */
+
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
 
   font-size: 25px;
 
   background-color: var(--amarelo_padrao);
-  padding: 20px 0;
+  padding: 48px 24px 10px 24px;
   border-radius: 100px 100px 0 0;
 }
 
@@ -88,7 +123,7 @@ form {
 }
 
 .comprado {
-  color: var(--cinza_claro);
+  color: var(--cinza_escuro);
   background-color: unset;
   border: unset;
 }
