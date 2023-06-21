@@ -109,6 +109,11 @@ input::-webkit-inner-spin-button {
   border: 3px solid var(--amarelo_padrao);
 }
 
+.btnCompra:disabled {
+  transform: unset;
+  border: unset
+}
+
 
 .erro {
   visibility: hidden;
