@@ -1,4 +1,5 @@
 import colocaNumeros from "./numeros.js";
+import resetaRifa from "./numero-reset.js";
 
 const numeroIndisponivel = [96, 38, 23, 15, 119, 140]
 const inputNumero = document.querySelector('.input_numero')
@@ -33,13 +34,13 @@ function marcaNumero() {
     } else {
       document.querySelector('.erro').style.visibility = "unset"
     }
+    
+    document.querySelector('.input_numero').value = ''
 
   };
 }
 
 function trocaCor() {
-  // const numeroEscolhido = document.getElementById(`${value}`)
-  // numeroEscolhido.classList.add("comprado");
 
   numeroIndisponivel.forEach(element => {
     const numeroEscolhido = document.getElementById(`${element}`)
@@ -47,15 +48,11 @@ function trocaCor() {
   });
 }
 
-
-// function numerosJaVendidos() {
-//   numeroIndisponivel.forEach(element => {
-//     trocaCor(element)
-//   });
-// }
-
 window.onload = () => {
   colocaNumeros()
   marcaNumero()
   trocaCor()
+  resetaRifa()
 }
+
+export default numeroIndisponivel
