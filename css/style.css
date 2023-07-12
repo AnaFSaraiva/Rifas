@@ -107,13 +107,14 @@ input::-webkit-inner-spin-button {
   border: none;
 }
 
+
 .btnCompra {
   background-color: rgb(255, 255, 255);
   width: auto;
   padding: 15px 15px;
   color:#000000;
-
-
+  
+  
   border: 2px solid var(--azul_padrao);
   border-radius: 10px;
 }
@@ -126,6 +127,14 @@ input::-webkit-inner-spin-button {
 .btnCompra:active {
   transform: scale(95%);
   border: 2px solid var(--amarelo_padrao);
+}
+
+.btnCompra:disabled {
+  cursor: not-allowed;
+  transform: unset;
+  color:var(--cinza_claro);
+  border: 2px solid var(--cinza_claro);
+  border-radius: 10px;
 }
 
 .btnReset {

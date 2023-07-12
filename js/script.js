@@ -20,9 +20,10 @@ function adicionaNumero( numero ) {
 
 /* ----- habilita/desabilita botão ----- */
 inputNumero.addEventListener('keyup', (event) => {
-
+  const array = pegarNumerosIndisponiveis()
   const value = parseInt(event.currentTarget.value);
-  const includes = pegarNumerosIndisponiveis().includes(value)
+  const includes = array.includes(value)
+  console.log(includes)
 
   if (includes) {
     btnCompra.setAttribute("disabled", "")
