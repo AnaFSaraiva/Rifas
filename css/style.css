@@ -71,22 +71,22 @@ form {
 .input_numero {
   padding: 10px;
   font-size: 25px;
-  border-radius: 16px;
+  border-radius: 10px;
 
   outline: none;
-  border: 3px solid var(--azul_padrao);
+  border: 2px solid var(--azul_padrao);
 
   appearance: none;
 
 }
 
 .input_numero:hover {
-  border: 3px solid #4D99FF;
+  border: 2px solid #4D99FF;
 }
 
 .input_numero:focus {
 
-  border: 3px solid var(--amarelo_padrao);
+  border: 2px solid var(--amarelo_padrao);
 }
 
 /* ----- Tira arrow do input ----- */
@@ -95,38 +95,47 @@ input::-webkit-inner-spin-button {
 }
 
 /* ------------------------------- */
+.btn {
+  cursor: pointer;
+  width: 120px ;
+  padding: 15px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color:#f3f3f3;
+
+  border-radius: 8px;
+  border: none;
+}
 
 .btnCompra {
   background-color: rgb(255, 255, 255);
-  padding: 10px;
-  font-size: 20px;
+  width: auto;
+  padding: 15px 15px;
+  color:#000000;
 
-  border: 3px solid var(--azul_padrao);
-  border-radius: 16px;
+
+  border: 2px solid var(--azul_padrao);
+  border-radius: 10px;
 }
 
 .btnCompra:hover {
   cursor: pointer;
-  border: 3px solid #4D99FF;
+  border: 2px solid #4D99FF;
 }
 
 .btnCompra:active {
   transform: scale(95%);
-  border: 3px solid var(--amarelo_padrao);
+  border: 2px solid var(--amarelo_padrao);
 }
-
-/* .btnCompra:disabled {
-  transform: unset;
-  border: unset
-} */
 
 .btnReset {
 background-color: rgb(255, 255, 255);
-padding: 10px;
-font-size: 20px;
+width: auto;
+padding: 15px 15px;
+color: #000000;
 
 border: 2px solid var(--azul_padrao);
-border-radius: 16px;}
+border-radius: 10px;}
 
 .btnReset:hover{
   cursor: pointer;
@@ -137,12 +146,6 @@ border-radius: 16px;}
   transform: scale(95%);
   border: 2px solid #ff0000;
 }
-
-/* .btnReset:disabled {
-  transform: unset;
-  border: unset
-} */
-
 
 .erro {
   visibility: hidden;
@@ -208,13 +211,12 @@ border-radius: 16px;}
 
   font-size: 25px;
   font-weight: bold;
+  color: #000000;
 
 
   padding: 50px 50px ;
   background-color: #f3f3f3;
-  color:#ff0000;
 
-  border: 3px solid #ff0000;
   border-radius: 10px;
 }
 
@@ -223,24 +225,12 @@ border-radius: 16px;}
 }
 
 .btn_modal_cancelar{
-  cursor: pointer;
-  background-color: rgb(255, 255, 255);
-  width: 80px ;
-  padding: 10px 0;
-  font-size: 20px;
-
-  border: 3px solid var(--azul_padrao);
-  border-radius: 16px;
+  color: #000000;
+  background-color: var(--cinza_escuro);
 }
 
 .btn_modal_confirmar {
-  cursor: pointer;
-  background-color: rgb(255, 255, 255);
-  width: 80px ;
-  padding: 10px 0;
   margin-left: 20px;
-  font-size: 20px;
+  background-color: #d80000;
 
-  border: 3px solid #ff0000;
-  border-radius: 16px;
 }

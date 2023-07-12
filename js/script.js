@@ -1,15 +1,28 @@
 import colocaNumeros from "./numeros.js";
 import resetaRifa from "./numero-reset.js";
 
-const numeroIndisponivel = [96, 38, 23, 15, 119, 140]
+
 const inputNumero = document.querySelector('.input_numero')
 const btnCompra = document.querySelector('.btnCompra')
+
+
+function pegarNumerosIndisponiveis() {
+  const compreiNumero = JSON.parse(localStorage.getItem('compreiNumero'))
+  return compreiNumero || []
+}
+
+
+function adicionaNumero( numero ) {
+  const pegueiNumero = pegarNumerosIndisponiveis()
+  pegueiNumero.push(numero)
+  localStorage.setItem('compreiNumero', JSON.stringify(pegueiNumero))
+}
 
 /* ----- habilita/desabilita botão ----- */
 inputNumero.addEventListener('keyup', (event) => {
 
   const value = parseInt(event.currentTarget.value);
-  const includes = numeroIndisponivel.includes(value)
+  const includes = pegarNumerosIndisponiveis().includes(value)
 
   if (includes) {
     btnCompra.setAttribute("disabled", "")
@@ -26,7 +39,7 @@ function marcaNumero() {
     const numeroComprado = document.querySelector(".input_numero").value
 
     if (numeroComprado >= 1 && numeroComprado <= 170) {
-      numeroIndisponivel.push(parseInt(numeroComprado))
+      adicionaNumero(parseInt(numeroComprado))
       document.querySelector('.erro').style.visibility = "hidden"
 
       trocaCor()
@@ -42,7 +55,7 @@ function marcaNumero() {
 
 function trocaCor() {
 
-  numeroIndisponivel.forEach(element => {
+  pegarNumerosIndisponiveis().forEach(element => {
     const numeroEscolhido = document.getElementById(`${element}`)
     numeroEscolhido.classList.add("comprado")
   });
@@ -55,4 +68,4 @@ window.onload = () => {
   resetaRifa()
 }
 
-export default numeroIndisponivel
+export default pegarNumerosIndisponiveis
