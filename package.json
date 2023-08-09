@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "nodemon ./js/api.js"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
